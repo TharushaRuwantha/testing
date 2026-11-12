@@ -1,50 +1,77 @@
 
-<!-- MINI GAME SECTION -->
-<section id="game">
-    <div class="container">
-        <div class="section-label">BONUS / TAKE A BREAK</div>
-        <h2 class="section-title">A little game break. 🎮</h2>
-        <p class="section-description">
-            Take a break from exploring my portfolio.
-            Eat some emojis, grow your snake, and beat your high score!
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Snake Game | Tharusha</title>
 
-        <div class="game-wrapper">
-            <div class="game-header">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="game-intro">
+            <span class="eyebrow">A LITTLE GAME BREAK</span>
+            <h1>Emoji <span>Snake.</span> 🐍</h1>
+            <p>
+                Eat random emojis, grow your snake,
+                and beat your highest score!
+            </p>
+        </header>
+
+        <div class="game-card">
+
+            <div class="scoreboard">
                 <div>
-                    <span class="game-label">YOUR SCORE</span>
-                    <div class="game-score" id="score">0</div>
+                    <span>YOUR SCORE</span>
+                    <h2 id="score">0</h2>
                 </div>
+
                 <div class="best-score">
-                    <span class="game-label">BEST SCORE</span>
-                    <div class="game-score" id="best">0</div>
+                    <span>BEST SCORE</span>
+                    <h2 id="best">0</h2>
                 </div>
             </div>
 
             <div class="game-board" id="gameBoard">
-                <canvas id="snakeCanvas" width="500" height="500"></canvas>
+
+                <canvas id="snakeCanvas"
+                        width="500"
+                        height="500">
+                </canvas>
+
                 <div class="game-overlay" id="overlay">
+
                     <div class="overlay-content">
                         <div class="game-emoji">🐍</div>
-                        <h3 id="overlayTitle">Emoji Snake</h3>
+
+                        <h2 id="overlayTitle">
+                            Emoji Snake
+                        </h2>
+
                         <p id="overlayText">
                             Eat random emojis and grow your snake!
                         </p>
-                        <button id="startBtn" class="game-btn">
+
+                        <button id="startBtn">
                             Start Playing
                         </button>
                     </div>
+
                 </div>
             </div>
 
-            <div class="game-controls">
+            <div class="game-instructions">
                 <span>⌨️ Arrow Keys / WASD</span>
-                <span>Space to Pause</span>
+                <span>SPACE to Pause</span>
             </div>
 
             <div class="mobile-controls">
                 <button data-dir="up">↑</button>
-                <div>
+
+                <div class="horizontal-controls">
                     <button data-dir="left">←</button>
                     <button data-dir="down">↓</button>
                     <button data-dir="right">→</button>
@@ -54,6 +81,16 @@
             <button id="restartBtn" class="restart-btn">
                 ↻ Restart Game
             </button>
+
         </div>
-    </div>
-</section>
+
+        <footer>
+            Designed for Tharusha's Portfolio
+        </footer>
+
+    </main>
+
+    <script src="js/snake-game.js"></script>
+
+</body>
+</html>
